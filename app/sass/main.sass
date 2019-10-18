@@ -46,7 +46,10 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 	
-	
+.col-center
+	float: none
+    margin-right: auto
+    margin-left: auto
 
 .text-center
 	text-align: center
@@ -56,11 +59,11 @@ body
     background-position: center
     height: 100vh
 	
-	.header-text
-		color: white
-		font-size: 4rem
-		text-align: center
-		vertical-align: center
+.header-text
+	color: white
+	font-size: 4rem
+	text-align: center
+	
 .me
 	margin: 
 		top: 5rem
@@ -72,7 +75,7 @@ body
 		flex-direction: column
 		justify-content: center
 		margin:
-			left: 2rem
+			left: 7rem
 		h3
 			text-align: center
 			font-family: Merriweather-Bold
@@ -88,15 +91,13 @@ body
 		max-width: 500px
 		max-height: auto
 
-.margin
-	margin: 
-		top: 2rem 
 .info-table
 	border: 3px solid grey
 	color: white
-	margin: auto
-	padding: 
-		top: 100rem
+	margin: 
+		top: 5rem
+		left: auto
+		right: auto
 	th 
 		min-width: 5rem
 		border: 1px solid grey
@@ -119,10 +120,35 @@ body
 		color: white
 	.input-name
 		color: white
+.btn
+	margin: 
+		top: 2rem
+	background: 
+	border-radius: 2rem
+	text-align: center
+	height: 2.5rem
+	outline: none
+	border: none
+	font-size: 0.9rem
+	&:active
+		outline: none !important
+		border: none
+	&:focus
+		outline: none !important
+		border: none
+	&:hover
+		outline: none !important
+		border: none
+
+
+
+
 .main-info
+	margin:
+		top: 50px
 	color: white
 	display: none
-	
+
 
 
 @import "media" // Всегда в конце
