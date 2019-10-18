@@ -1,23 +1,22 @@
-@import url(../libs/bootstrap/css/bootstrap-grid.css);
 @import url(../libs/bootstrap/css/bootstrap.min.css);
 @font-face {
-  font-family: "Merriwethaer";
+  font-family: "Merriweather";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/Merriweather/Merriweather-Regular.eot");
-  src: url("../fonts/Merriweather/Merriweather-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather/Merriweather-Regular.woff") format("woff"), url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+  src: url("../fonts/MerriweatherRegular/Merriweather-Regular.eot");
+  src: url("../fonts/MerriweatherRegular/Merriweather-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherRegular/Merriweather-Regular.woff") format("woff"), url("../fonts/MerriweatherRegular/Merriweather-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Merriwethaer";
+  font-family: "Merriweather";
   font-weight: 300;
   font-style: normal;
-  src: url("../fonts/Merriweather/MerriweatherLight/Merriweather-Light.eot");
-  src: url("../fonts/Merriweather/MerriweatherLight/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Merriweather/MerriweatherLight/Merriweather-Light.woff") format("woff"), url("../fonts/Merriweather/MerriweatherLight/Merriweather-Light.ttf") format("truetype");
+  src: url("../fonts/MerriweatherLight/Merriweather-Light.eot");
+  src: url("../fonts/MerriweatherLight/Merriweather-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherLight/Merriweather-Light.woff") format("woff"), url("../fonts/MerriweatherLight/Merriweather-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Merriwethaer";
+  font-family: "Merriweather-Bold";
   font-weight: 700;
   font-style: normal;
   src: url("../fonts/MerriweatherBold/Merriweather-Bold.eot");
@@ -105,28 +104,123 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.75;
-  font-family: "Merriwethaer", sans-serif;
+  font-family: "Merriweather", sans-serif;
   overflow-x: hidden;
-}
-
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .text-center {
   text-align: center;
 }
 
-::-moz-selection {
-  background-color: orange;
-  color: #fff;
+.header-img {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
-::selection {
-  background-color: orange;
-  color: #fff;
+.header-text {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+  vertical-align: center;
+}
+
+.me {
+  margin-top: 5rem;
+  color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.me .about {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 2rem;
+}
+
+.me .about h3 {
+  text-align: center;
+  font-family: Merriweather-Bold;
+  font-size: 3rem;
+}
+
+.me .about p {
+  text-align: left;
+}
+
+.me .about p span {
+  font-family: Merriweather-Bold;
+  font-size: 1.2rem;
+}
+
+.me img {
+  max-width: 500px;
+  max-height: auto;
+}
+
+.margin {
+  margin-top: 2rem;
+}
+
+.info-table {
+  border: 3px solid grey;
+  color: white;
+  margin: auto;
+  padding-top: 100rem;
+}
+
+.info-table th {
+  min-width: 5rem;
+  border: 1px solid grey;
+}
+
+.info-table td {
+  border: 1px solid grey;
+}
+
+.inputs {
+  margin-top: 2rem;
+}
+
+.inputs .input_your_phone_name {
+  background: white;
+  border-radius: 2rem;
+  text-align: left;
+  height: 2.5rem;
+  padding-left: 1.2rem;
+  border: none;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.inputs .input-phone {
+  color: white;
+}
+
+.inputs .input-name {
+  color: white;
+}
+
+.main-info {
+  color: white;
+  display: none;
 }
 
 /*==========  Desktop First  ==========*/
