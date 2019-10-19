@@ -1,30 +1,30 @@
 var gulp           = require('gulp'),
-		gutil          = require('gulp-util' ),
-		sass           = require('gulp-sass'),
-		browserSync    = require('browser-sync'),
-		concat         = require('gulp-concat'),
-		uglify         = require('gulp-uglify'),
-		cleanCSS       = require('gulp-clean-css'),
-		rename         = require('gulp-rename'),
-		del            = require('del'),
-		imagemin       = require('gulp-imagemin'),
-		cache          = require('gulp-cache'),
-		autoprefixer   = require('gulp-autoprefixer'),
-		ftp            = require('vinyl-ftp'),
-		notify         = require("gulp-notify"),
-		rsync          = require('gulp-rsync');
+	gutil          = require('gulp-util' ),
+	sass           = require('gulp-sass'),
+	browserSync    = require('browser-sync'),
+	concat         = require('gulp-concat'),
+	uglify         = require('gulp-uglify'),
+	cleanCSS       = require('gulp-clean-css'),
+	rename         = require('gulp-rename'),
+	del            = require('del'),
+	imagemin       = require('gulp-imagemin'),
+	cache          = require('gulp-cache'),
+	autoprefixer   = require('gulp-autoprefixer'),
+	ftp            = require('vinyl-ftp'),
+	notify         = require("gulp-notify"),
+	rsync          = require('gulp-rsync');
 
 	gulp.task('browser-sync', function() {
 		browserSync({
 			server: {
 				baseDir: 'app'
 			},
-			notify: false,
+			notify: false, 
 			//tunnel: true,
 			//tunnel: "projectmane" //Demonstration page: http://projectmane.localtunnel.me
 		});
 	});
-
+ 
 // Пользовательские скрипты проекта
 
 gulp.task('common-js', function() {
@@ -54,13 +54,18 @@ gulp.task('sass', function() {
 	.pipe(autoprefixer(['last 15 versions']))
 	//.pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(gulp.dest('app/css'))
-	.pipe(browserSync.stream())
+	.pipe(browserSync.reload({ stream: true }))
+});
+
+gulp.task('html', function () {
+	return gulp.src('app/*.html')
+	.pipe(browserSync.reload({ stream: true }))
 });
 
 gulp.task('watch', function() {
 	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass'));
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('js'));
-	gulp.watch('app/*.html', browserSync.reload);
+	gulp.watch('app/*.html', gulp.parallel('html'));
 });
 
 gulp.task('imagemin', function() {
