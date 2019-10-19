@@ -3,38 +3,6 @@
 @import "vars"
 
 
-*
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-	&:before, &:after
-		-webkit-box-sizing: border-box
-		-moz-box-sizing: border-box
-		box-sizing: border-box
-
-*::-webkit-input-placeholder
-	color: #666
-	opacity: 1
-
-*:-moz-placeholder
-	color: #666
-	opacity: 1
-
-*::-moz-placeholder
-	color: #666
-	opacity: 1
-
-*:-ms-input-placeholder
-	color: #666
-	opacity: 1
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid
-	color: #666
-body input:required:valid,
-body textarea:required:valid
-	color: #666
-
 html, body
 	height: 100%
 
@@ -159,7 +127,6 @@ body
 		margin:
 			bottom: 1em
 
-
 .inputs 
 	margin: 
 		top: 2rem
@@ -218,4 +185,4 @@ body
 		color: $accent
 
 
-@import "media" // Всегда в конце
+@import "media" 
