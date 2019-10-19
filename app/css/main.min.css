@@ -1,6 +1,6 @@
-@import url(../libs/bootstrap/css/bootstrap.min.css);
+@import url(../libs/bootstrap/css/bootstrap.css);
 @font-face {
-  font-family: "Merriweather";
+  font-family: "Merriweather-Regular";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/MerriweatherRegular/Merriweather-Regular.eot");
@@ -24,35 +24,11 @@
 }
 
 @font-face {
-  font-family: "OpenSans";
-  font-weight: normal;
-  font-style: normal;
-  src: url("../fonts/OpenSansRegular/OpenSans-Regular.eot");
-  src: url("../fonts/OpenSansRegular/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "OpenSans";
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/OpenSansLight/OpenSans-Light.eot");
-  src: url("../fonts/OpenSansLight/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansLight/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSansLight/OpenSans-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "OpenSans";
+  font-family: "Merriweather-BoldItalic";
   font-weight: 700;
   font-style: normal;
-  src: url("../fonts/OpenSansBold/OpenSans-Bold.eot");
-  src: url("../fonts/OpenSansBold/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansBold/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSansBold/OpenSans-Bold.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "OpenSans";
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/OpenSansBold/OpenSans-SemiBold.eot");
-  src: url("../fonts/OpenSansBold/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansBold/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSansBold/OpenSans-SemiBold.ttf") format("truetype");
+  src: url("../fonts/MerriweatherBold/Merriweather-BoldItalic.eot");
+  src: url("../fonts/MerriweatherBold/Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherBold/Merriweather-BoldItalic.woff") format("woff"), url("../fonts/MerriweatherBold/Merriweather-BoldItalic.ttf") format("truetype");
 }
 
 * {
@@ -104,8 +80,14 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.75;
-  font-family: "Merriweather", sans-serif;
+  font-family: "Merriweather-Regular", sans-serif;
   overflow-x: hidden;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .col-center {
@@ -124,14 +106,21 @@ body {
   height: 100vh;
 }
 
+.frame {
+  border-color: white;
+  border-style: double;
+  border-color: #FF826B;
+}
+
 .header-text {
   color: white;
   font-size: 4rem;
   text-align: center;
+  margin-bottom: 7vh;
 }
 
 .me {
-  margin-top: 5rem;
+  margin: 3em;
   color: white;
   display: -webkit-box;
   display: -webkit-flex;
@@ -157,44 +146,95 @@ body {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 7rem;
+  margin-left: 5rem;
 }
 
 .me .about h3 {
-  text-align: center;
+  text-align: left;
   font-family: Merriweather-Bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+  text-decoration: underline;
 }
 
 .me .about p {
   text-align: left;
+  font-size: 0.9rem;
 }
 
 .me .about p span {
   font-family: Merriweather-Bold;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .me img {
   max-width: 500px;
-  max-height: auto;
 }
 
 .info-table {
-  border: 3px solid grey;
-  color: white;
+  overflow-x: auto;
+  border-radius: 10px;
+  border-spacing: 0;
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
 }
 
+.info-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.info-table tr:last-child td:first-child {
+  border-radius: 0 0 0 10px;
+}
+
+.info-table tr:last-child td:last-child {
+  border-radius: 0 0 10px 0;
+}
+
+.info-table tr td:last-child {
+  border-right: none;
+}
+
 .info-table th {
-  min-width: 5rem;
-  border: 1px solid grey;
+  background: #81B3EC;
+  text-shadow: 0 0.5px 0.5px #2D2020;
+  padding: 10px 20px;
+}
+
+.info-table th:first-child {
+  text-align: left;
+  border-top-left-radius: 10px;
+}
+
+.info-table th:last-child {
+  border-top-right-radius: 10px;
+  border-right: none;
+}
+
+.info-table th, .info-table td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  border-color: #212021;
 }
 
 .info-table td {
-  border: 1px solid grey;
+  padding: 10px 20px;
+  background: #F8E391;
+}
+
+.info-table td:first-child {
+  text-align: left;
+}
+
+.info-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #FF826B;
+  font-size: 17px;
+  margin-bottom: 1em;
 }
 
 .inputs {
@@ -220,61 +260,196 @@ body {
   color: white;
 }
 
-.btn {
+#button_moreInfo {
   margin-top: 2rem;
+  background-color: #FF826B;
   border-radius: 2rem;
   text-align: center;
   height: 2.5rem;
-  outline: none;
-  border: none;
   font-size: 0.9rem;
-}
-
-.btn:active {
   outline: none !important;
   border: none;
 }
 
-.btn:focus {
-  outline: none !important;
-  border: none;
+#button_moreInfo:active {
+  background-color: #FF826B;
+  outline-color: #FF826B !important;
+  border-color: #FF826B !important;
 }
 
-.btn:hover {
-  outline: none !important;
-  border: none;
+#button_moreInfo:focus {
+  background-color: #FF826B;
+  outline-color: #FF826B !important;
+  border-color: #FF826B none !important;
+}
+
+#button_moreInfo:hover {
+  background-color: transparent;
+  color: #FF826B;
+  outline: #FF826B;
+  border: #FF826B;
 }
 
 .main-info {
   margin-top: 50px;
   color: white;
-  display: none;
+}
+
+.main-info a {
+  color: #FF826B;
+}
+
+.main-info b {
+  font-family: Merriweather-BoldItalic;
+  text-decoration: underline;
+}
+
+.main-info .underline {
+  text-decoration: underline;
+  color: #FF826B;
 }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  /**/
+  .me {
+    margin: 2em;
+  }
+  .me .about {
+    margin-left: 3rem;
+  }
+  .me .about h3 {
+    text-align: left;
+    font-family: Merriweather-Bold;
+    font-size: 2.5rem;
+    margin-bottom: 1em;
+    text-decoration: underline;
+  }
+  .me .about p {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .me .about p span {
+    font-family: Merriweather-Bold;
+    font-size: 1.1rem;
+  }
+  img {
+    margin-left: 2rem;
+  }
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  /**/
+  .me img {
+    max-width: 400px;
+    max-height: 250px;
+  }
+  .me .about {
+    text-align: center;
+  }
+  .me .about h3 {
+    font-size: 2.1rem;
+  }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   /**/
+  .header-text {
+    font-size: 2rem;
+  }
+  .me img {
+    text-align: center;
+    max-width: 200px;
+    max-height: 250px;
+  }
+  .me .about {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .me .about h3 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  .me .about p {
+    font-size: 0.6rem;
+    margin-bottom: 0.4em;
+  }
+  .me .about p span {
+    font-family: Merriweather-Bold;
+    font-size: 0.8rem;
+  }
+  .input-name {
+    margin-top: 15px;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  /**/
+  .header-text {
+    font-size: 2rem;
+  }
+  .me {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+  .me img {
+    max-width: 200px;
+  }
+  .me .about {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .me .about h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0.4em;
+    font-size: 1rem;
+  }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  /**/
+  .header-text {
+    margin-top: 1em;
+    font-size: 1.5rem;
+  }
+  .frame {
+    padding-bottom: 0;
+  }
+  .me {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+  .me img {
+    max-width: 150px;
+  }
+  .me .about {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .me .about h3 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0.4em;
+    font-size: 1rem;
+  }
+  .me .about p {
+    font-size: 0.6rem;
+    margin-bottom: 0.4em;
+  }
+  .me .about p span {
+    font-family: Merriweather-Bold;
+    font-size: 0.8rem;
+  }
+  .info-table {
+    margin-top: 2em;
+  }
 }
 
 /*==========  Mobile First  ==========*/

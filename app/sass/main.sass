@@ -45,7 +45,12 @@ body
 	line-height: 1.75
 	font-family: $default-font
 	overflow-x: hidden
-	
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
 .col-center
 	float: none
     margin-right: auto
@@ -58,15 +63,21 @@ body
     background-size: cover
     background-position: center
     height: 100vh
-	
+.frame
+	border-color: white
+	border-style: double
+	border-color: $accent
+
 .header-text
 	color: white
 	font-size: 4rem
 	text-align: center
+	color: 
+	margin: 
+		bottom: 7vh
 	
 .me
-	margin: 
-		top: 5rem
+	margin: 3em	
 	color: white
 	display: flex
 	justify-content: center
@@ -75,34 +86,79 @@ body
 		flex-direction: column
 		justify-content: center
 		margin:
-			left: 7rem
+			left: 5rem
 		h3
-			text-align: center
+			text-align: left
 			font-family: Merriweather-Bold
-			font-size: 3rem
+			font-size: 2.5rem
+			margin-bottom: 1em
+			text-decoration: underline
+			
 		p
 			text-align: left
-			
+			font-size: 0.9rem
 			span
-				
 				font-family: Merriweather-Bold
-				font-size: 1.2rem
+				font-size: 1.1rem
 	img
 		max-width: 500px
-		max-height: auto
+		
 
 .info-table
-	border: 3px solid grey
-	color: white
+	overflow-x: auto
+	border-radius: 10px
+	border-spacing: 0
 	margin: 
 		top: 5rem
 		left: auto
 		right: auto
+
+	tr:last-child
+		td 
+			border-bottom: 0
+		td:first-child
+			border-radius: 0 0 0 10px
+		td:last-child
+			border-radius: 0 0 10px 0
+			
+	tr 
+		td:last-child
+			border-right: none
+
 	th 
-		min-width: 5rem
-		border: 1px solid grey
+		background: #81B3EC
+		text-shadow: 0 0.5px 0.5px #2D2020
+		padding: 10px 20px
+		&:first-child
+			text-align: left
+			border-top-left-radius: 10px
+		&:last-child
+			border-top-right-radius: 10px
+			border-right: none
+
+	th, td
+		border-style: solid
+		border-width: 0 1px 1px 0
+		border-color: #212021
+
 	td 
-		border: 1px solid grey
+		padding: 10px 20px
+		background: #F8E391
+		
+		&:first-child
+			text-align: left
+
+
+	caption 
+		caption-side: top
+		text-align: left
+		padding: 10px 0
+		font-size: 14px
+		color: $accent
+		font-size: 17px
+		margin:
+			bottom: 1em
+
 
 .inputs 
 	margin: 
@@ -120,35 +176,46 @@ body
 		color: white
 	.input-name
 		color: white
-.btn
+
+#button_moreInfo
 	margin: 
 		top: 2rem
-	background: 
+	background-color: $accent
 	border-radius: 2rem
 	text-align: center
 	height: 2.5rem
-	outline: none
-	border: none
 	font-size: 0.9rem
+	outline: none !important
+	border: none
 	&:active
-		outline: none !important
-		border: none
+		background-color: $accent 
+		outline-color: $accent  !important
+		border-color: $accent !important
+
 	&:focus
-		outline: none !important
-		border: none
+		background-color: $accent 
+		outline-color: $accent  !important
+		border-color: $accent  none !important
+
 	&:hover
-		outline: none !important
-		border: none
-
-
-
+		background-color: transparent 
+		color: $accent
+		outline: $accent
+		border: $accent 
 
 .main-info
 	margin:
 		top: 50px
 	color: white
-	display: none
-
+	//display: none
+	a
+		color: $accent
+	b
+		font-family: Merriweather-BoldItalic
+		text-decoration: underline
+	.underline
+		text-decoration: underline
+		color: $accent
 
 
 @import "media" // Всегда в конце
