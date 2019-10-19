@@ -1,4 +1,4 @@
-@import url(../libs/bootstrap/css/bootstrap.css);
+@import url(../libs/bootstrap/css/bootstrap.min.css);
 @font-face {
   font-family: "Merriweather-Regular";
   font-weight: normal;
@@ -29,46 +29,6 @@
   font-style: normal;
   src: url("../fonts/MerriweatherBold/Merriweather-BoldItalic.eot");
   src: url("../fonts/MerriweatherBold/Merriweather-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherBold/Merriweather-BoldItalic.woff") format("woff"), url("../fonts/MerriweatherBold/Merriweather-BoldItalic.ttf") format("truetype");
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-*::-webkit-input-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-*:-moz-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-*::-moz-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-*:-ms-input-placeholder {
-  color: #666;
-  opacity: 1;
-}
-
-body input:focus:required:invalid,
-body textarea:focus:required:invalid {
-  color: #666;
-}
-
-body input:required:valid,
-body textarea:required:valid {
-  color: #666;
 }
 
 html, body {
